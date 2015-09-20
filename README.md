@@ -2,7 +2,8 @@
 
 Here is an unofficial Dockerfile for [mailcatcher][mailcatcher].
 
-You can find several versions of this image in [the dedicated docker hub page][dockerhubpage].
+You can find several versions of this image in [the dedicated docker hub page][dockerhubpage].  
+It is a pretty light image: ~ 135 MB uncompressed.
 
 ## Usage
 
@@ -31,11 +32,7 @@ then send yout emails through your docker host on port 1025 (or any port you wan
 
 Just clone this repo and run:
 
-    docker -t tophfr/mailcatcher build .
-
-## Image size
-
-This docker image is pretty light : ~ 135 MB uncompressed.
+    docker build -t tophfr/mailcatcher .
 
 
   [mailcatcher]: http://mailcatcher.me/ "MailCatcher fake SMTP server with web interface" 
