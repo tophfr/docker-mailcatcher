@@ -13,7 +13,7 @@ Get it:
 
 Run it:
 
-    docker run -d -p 1080:80 --name mail tophfr/mailcatcher
+    docker run -d -p 1080:80 --name smtp tophfr/mailcatcher
 
 Link it:
 
