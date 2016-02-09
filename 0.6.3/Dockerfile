@@ -8,7 +8,7 @@ RUN \
     rm -rf /var/lib/apt/lists/* && \
     true
 
-ENV MAILCATCHER_VERSION 0.6.4
+ENV MAILCATCHER_VERSION 0.6.3
 
 RUN \
     buildDeps=" \
