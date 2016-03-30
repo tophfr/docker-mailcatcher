@@ -1,26 +1,20 @@
-FROM debian:wheezy
+FROM alpine:3.3
 
 MAINTAINER toph <toph@toph.fr>
 
-RUN \
-    apt-get update && \
-    apt-get install -y ruby libsqlite3-0 --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/* && \
-    true
+RUN apk add --no-cache ruby ruby-bigdecimal sqlite-libs
 
 ENV MAILCATCHER_VERSION 0.6.4
 
 RUN \
     buildDeps=" \
         ruby-dev \
-        build-essential \
-        libsqlite3-dev \
+        make g++ \
+        sqlite-dev \
     " && \
-    apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/* && \
+    apk add --no-cache $buildDeps && \
     gem install -v $MAILCATCHER_VERSION mailcatcher --no-ri --no-rdoc && \
-    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $buildDeps && \
-    rm -rf /var/lib/apt/lists/* && \
-    true
+    apk del $buildDeps
 
 EXPOSE 25 80
 
