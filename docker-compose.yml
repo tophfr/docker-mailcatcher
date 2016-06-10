@@ -7,7 +7,7 @@ services:
     ports:
       - 1080:80
   test:
-    image: busybox
+    image: alpine:3.4
     depends_on:
       - mail
     command: "sh -c 'echo \"Subject: bonjour\n\nca va bien ?\nbisou\" | sendmail -S mail aaa@zzz.eee'"
