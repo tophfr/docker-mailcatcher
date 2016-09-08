@@ -4,17 +4,15 @@ MAINTAINER toph <toph@toph.fr>
 
 RUN apk add --no-cache ruby ruby-bigdecimal sqlite-libs libstdc++
 
-ENV MAILCATCHER_VERSION 0.6.4
+ENV MAILCATCHER_VERSION 0.6.5
 
-RUN \
-    buildDeps=" \
+RUN apk add --no-cache --virtual .build-deps \
         ruby-dev \
         make g++ \
         sqlite-dev \
-    " && \
-    apk add --no-cache $buildDeps && \
+        && \
     gem install -v $MAILCATCHER_VERSION mailcatcher --no-ri --no-rdoc && \
-    apk del $buildDeps
+    apk del .build-deps
 
 EXPOSE 25 80
 

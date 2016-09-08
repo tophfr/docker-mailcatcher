@@ -2,7 +2,7 @@ version: '2'
 
 services:
   mail:
-    image: tophfr/mailcatcher
+    image: tophfr/mailcatcher:latest
     build: .
     ports:
       - 1080:80
