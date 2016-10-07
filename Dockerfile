@@ -2,7 +2,9 @@ FROM alpine:3.4
 
 MAINTAINER toph <toph@toph.fr>
 
-RUN apk add --no-cache ruby ruby-bigdecimal sqlite-libs libstdc++
+RUN apk add --no-cache ca-certificates openssl
+
+RUN apk add --no-cache ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
 
 ENV MAILCATCHER_VERSION 0.6.5
 
