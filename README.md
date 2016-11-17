@@ -2,8 +2,18 @@
 
 Here is an unofficial Dockerfile for [mailcatcher][mailcatcher].
 
-You can find several versions of this image in [the dedicated docker hub page][dockerhubpage].  
-It is a pretty light image: ~ 36 MB uncompressed.
+It is a very small image (~34 MB uncompressed) available on [docker hub][dockerhubpage] based on [Alpine Linux][alpinehubpage] and using the last available release from the official Github repo of [MailHog][mailhog].
+
+
+## Changelog
+
+- 2016-10-07 
+- 2016-09-08 Upgrade mailcatcher from 0.6.4 to 0.6.5
+- 2016-06-10 Upgrade Alpine Linux from 3.3 to 3.4
+- 2016-04-06 Adding libstdc++
+- 2016-03-30 Replace Debian by Alpine Linux
+...
+
 
 ## Usage
 
@@ -28,6 +38,7 @@ If you want to send emails from your host you can map the 25 port:
 
 then send yout emails through your docker host on port 1025 (or any port you want)
 
+
 ## Build
 
 Just clone this repo and run:
@@ -37,3 +48,4 @@ Just clone this repo and run:
 
   [mailcatcher]: http://mailcatcher.me/ "MailCatcher fake SMTP server with web interface" 
   [dockerhubpage]: https://hub.docker.com/r/tophfr/mailcatcher/ "Mailcatcher docker hub page"
+  [alpinehubpage]: https://hub.docker.com/_/alpine/ "A minimal Docker image based on Alpine Linux with a complete package index and only 5 MB in size!"
