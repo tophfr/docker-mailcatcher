@@ -12,6 +12,7 @@ It is a very small image (~34 MB uncompressed) available on [docker hub][dockerh
 - 2016-06-10 Upgrade Alpine Linux from 3.3 to 3.4
 - 2016-04-06 Adding libstdc++
 - 2016-03-30 Replace Debian by Alpine Linux
+
 ...
 
 
