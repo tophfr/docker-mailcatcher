@@ -6,7 +6,7 @@ RUN apk add --no-cache ca-certificates openssl
 
 RUN apk add --no-cache ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
 
-ARG MAILCATCHER_VERSION=0.6.2
+ARG MAILCATCHER_VERSION=0.6.3
 
 RUN apk add --no-cache --virtual .build-deps \
         ruby-dev \
