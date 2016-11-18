@@ -2,13 +2,16 @@ version: '2'
 
 services:
   mail:
-    image: tophfr/mailcatcher:latest
-    build: .
+    image: tophfr/mailcatcher:$VERSION
+    build:
+      context: .
+      args:
+        MAILCATCHER_VERSION: $VERSION
     ports:
       - 1080:80
   test:
     image: tophfr/dockerize:latest
     depends_on:
       - mail
-    command: "-wait tcp://mail:25 sh -c 'echo \"Subject: bonjour de $$HOSTNAME\n\nca va bien ?\nbisou\" | sendmail -S mail aaa@zzz.eee'"
+    command: "-wait tcp://mail:25 sh -c 'echo \"From: x@y.z\nSubject: bonjour de $$HOSTNAME v$VERSION\n\nca va bien ?\nbisou\" | sendmail -S mail aaa@zzz.eee'"
 
