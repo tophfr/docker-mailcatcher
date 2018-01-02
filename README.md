@@ -7,6 +7,7 @@ It is a very small image (~34 MB uncompressed) available on [docker hub][dockerh
 
 ## Changelog
 
+- 2018-01-02 Upgrading Alpine Linux from 3.6 to 3.7
 - 2017-05-30 Upgrading Alpine Linux from 3.4 to 3.6
 - 2016-10-07 Adding ruby-json
 - 2016-09-08 Upgrading mailcatcher from 0.6.4 to 0.6.5
