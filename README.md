@@ -2,7 +2,7 @@
 
 Here is an unofficial Dockerfile for [mailcatcher][mailcatcher].
 
-It is a very small image (~34 MB uncompressed) available on [docker hub][dockerhubpage] based on [Alpine Linux][alpinehubpage] and using the last available release from the official Github repo of [MailHog][mailhog].
+It is a very small image (~34 MB uncompressed) available on [docker hub][dockerhubpage] based on [Alpine Linux][alpinehubpage] and using the last available release from the official Github repo of [mailcatcher][mailcatcher].
 
 
 ## Changelog
@@ -47,6 +47,10 @@ then send yout emails through your docker host on port 1025 (or any port you wan
 Just clone this repo and run:
 
     docker build -t tophfr/mailcatcher .
+
+or
+
+    docker-compose build
 
 
   [mailcatcher]: http://mailcatcher.me/ "MailCatcher fake SMTP server with web interface" 
