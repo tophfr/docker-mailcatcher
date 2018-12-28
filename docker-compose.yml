@@ -1,6 +1,7 @@
 version: '2'
 
 services:
+
   mail:
     image: tophfr/mailcatcher:$VERSION
     build:
@@ -8,7 +9,8 @@ services:
       args:
         MAILCATCHER_VERSION: $VERSION
     ports:
-      - 1080:80
+      - "$IP:1080:80"
+
   test:
     image: tophfr/dockerize:latest
     depends_on:

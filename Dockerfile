@@ -1,10 +1,16 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 MAINTAINER toph <toph@toph.fr>
 
 RUN apk add --no-cache ca-certificates openssl
 
-RUN apk add --no-cache ruby ruby-bigdecimal ruby-json sqlite-libs libstdc++
+RUN apk add --no-cache \
+        ruby \
+        ruby-bigdecimal \
+        ruby-etc \
+        ruby-json \
+        libstdc++ \
+        sqlite-libs
 
 ARG MAILCATCHER_VERSION=0.6.5
 
@@ -12,9 +18,8 @@ RUN apk add --no-cache --virtual .build-deps \
         ruby-dev \
         make g++ \
         sqlite-dev \
-        && \
-    gem install -v $MAILCATCHER_VERSION mailcatcher --no-ri --no-rdoc && \
-    apk del .build-deps
+    && gem install -v $MAILCATCHER_VERSION mailcatcher --no-ri --no-rdoc \
+    && apk del .build-deps
 
 EXPOSE 25 80
 
