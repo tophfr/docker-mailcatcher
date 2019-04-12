@@ -2,11 +2,12 @@
 
 Here is an unofficial Dockerfile for [mailcatcher][mailcatcher].
 
-It is a very small image (~34 MB uncompressed) available on [docker hub][dockerhubpage] based on [Alpine Linux][alpinehubpage] and using the last available release from the official Github repo of [mailcatcher][mailcatcher].
+It is a very small image (~35 MB uncompressed) available on [docker hub][dockerhubpage] based on [Alpine Linux][alpinehubpage] and using the last available release from the official Github repo of [mailcatcher][mailcatcher].
 
 
 ## Changelog
 
+- 2019-04-12 Upgrading Mailcatcher from 0.7.0 to 0.7.1
 - 2019-04-12 Upgrading Mailcatcher from 0.6.5 to 0.7.0 and Alpine Linux from 3.8 to 3.9
 - 2018-12-28 Upgrading Alpine Linux from 3.7 to 3.8
 - 2018-01-02 Upgrading Alpine Linux from 3.6 to 3.7

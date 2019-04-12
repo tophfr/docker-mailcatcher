@@ -5,7 +5,7 @@ services:
   mail:
     image: tophfr/mailcatcher:$VERSION
     build:
-      context: .
+      context: build
       args:
         MAILCATCHER_VERSION: $VERSION
     ports:
