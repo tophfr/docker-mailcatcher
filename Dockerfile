@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 MAINTAINER toph <toph@toph.fr>
 
@@ -12,7 +12,7 @@ RUN apk add --no-cache \
         libstdc++ \
         sqlite-libs
 
-ARG MAILCATCHER_VERSION=0.7.0
+ARG MAILCATCHER_VERSION=0.7.1
 
 RUN apk add --no-cache --virtual .build-deps \
         ruby-dev \
